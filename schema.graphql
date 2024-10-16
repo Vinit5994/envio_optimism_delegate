@@ -1,0 +1,47 @@
+type GovernanceToken_Approval {
+  id: ID!
+  owner: String!
+  spender: String!
+  value: BigInt!
+}
+
+type GovernanceToken_DelegateChanged {
+  id: ID!
+  delegator: String!
+  fromDelegate: String!
+  toDelegate: String!
+}
+
+type GovernanceToken_DelegateVotesChanged {
+  id: ID!
+  delegate: String!
+  previousBalance: BigInt!
+  newBalance: BigInt!
+}
+
+type GovernanceToken_OwnershipTransferred {
+  id: ID!
+  previousOwner: String!
+  newOwner: String!
+}
+
+type GovernanceToken_Transfer {
+  id: ID!
+  from: String!
+  to: String!
+  value: BigInt!
+}
+
+type Account {
+  id: ID!
+  balance: BigInt!
+  delegate: String!
+}
+
+type Delegate {
+  id: ID!
+  address: String!  # Added address field
+  latestBalance: BigInt!
+  delegatedFromCount: BigInt!
+  delegators: [String!]!
+}
