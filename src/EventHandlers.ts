@@ -156,4 +156,4 @@ GovernanceToken.Transfer.handler(async ({ event, context }) => {
   // Update delegations
   await updateDelegation(context, event.params.from, fromAccount.delegate);
   await updateDelegation(context, event.params.to, toAccount.delegate);
-});
+}); 
